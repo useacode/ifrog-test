@@ -21,7 +21,7 @@ var app = {
 		        {
 		            text: "Ok",
 		            click: function() {
-		            	if(/^\w+$/.test($('#name').val())){
+		            	if(/^[а-яА-ЯёЁa-zA-Z]+$/.test($('#name').val())){
 							$('#page_title').text($('#name').val());
 							$( this ).dialog( "close");
 						}          			        
@@ -54,7 +54,7 @@ var app = {
 
 	addNameClick: function(){
 		$('#add-name').click(function() {
-			if(/^\w+$/.test($('#hidden-input').val())){
+			if(/^[а-яА-ЯёЁa-zA-Z]+$/.test($('#hidden-input').val())){
 				app.addName($('#hidden-input').val());
 				$('#hidden-input').val('');
 			}
